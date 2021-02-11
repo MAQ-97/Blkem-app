@@ -25,6 +25,8 @@ class SearchPeopleEntity{
   SearchPeopleEntity({
     @required this.id,
     @required this.about,
+    @required this.followers,
+    @required this.posts,
     @required this.avatar,
     @required this.last_active,
     @required this.username,
@@ -39,4 +41,4 @@ class SearchPeopleEntity{
     @required this.is_user,
     @required this.is_following,
     @required this.follow_requested});
-} 
+}

@@ -25,6 +25,8 @@ class SearchHashtagEntity{
   SearchHashtagEntity({
     @required this.id,
     @required this.about,
+    @required this.followers,
+    @required this.posts,
     @required this.avatar,
     @required this.last_active,
     @required this.username,

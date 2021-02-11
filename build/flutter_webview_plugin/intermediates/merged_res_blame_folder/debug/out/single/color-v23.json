@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "/Users/hztech/application/Blkem/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/Users/hztech/.gradle/caches/transforms-2/files-2.1/43470e6950c5db857f2f46d5e1887707/appcompat-1.1.0/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/Users/hztech/application/Blkem/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/hztech/.gradle/caches/transforms-2/files-2.1/43470e6950c5db857f2f46d5e1887707/appcompat-1.1.0/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/Users/hztech/application/Blkem/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/Users/hztech/.gradle/caches/transforms-2/files-2.1/43470e6950c5db857f2f46d5e1887707/appcompat-1.1.0/res/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/Users/hztech/application/Blkem/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/Users/hztech/.gradle/caches/transforms-2/files-2.1/43470e6950c5db857f2f46d5e1887707/appcompat-1.1.0/res/color-v23/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/Users/hztech/application/Blkem/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
+        "source": "/Users/hztech/.gradle/caches/transforms-2/files-2.1/43470e6950c5db857f2f46d5e1887707/appcompat-1.1.0/res/color-v23/abc_tint_default.xml"
+    },
+    {
+        "merged": "/Users/hztech/application/Blkem/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/Users/hztech/.gradle/caches/transforms-2/files-2.1/43470e6950c5db857f2f46d5e1887707/appcompat-1.1.0/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/Users/hztech/application/Blkem/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/Users/hztech/.gradle/caches/transforms-2/files-2.1/43470e6950c5db857f2f46d5e1887707/appcompat-1.1.0/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/hztech/application/Blkem/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/Users/hztech/.gradle/caches/transforms-2/files-2.1/43470e6950c5db857f2f46d5e1887707/appcompat-1.1.0/res/color-v23/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/Users/hztech/application/Blkem/build/flutter_webview_plugin/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/Users/hztech/.gradle/caches/transforms-2/files-2.1/43470e6950c5db857f2f46d5e1887707/appcompat-1.1.0/res/color-v23/abc_tint_seek_thumb.xml"
+    }
+]

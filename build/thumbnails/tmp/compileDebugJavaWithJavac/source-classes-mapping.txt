@@ -1,0 +1,4 @@
+com/asapjay/thumbnails/BuildConfig.java
+ com.asapjay.thumbnails.BuildConfig
+com/asapjay/thumbnails/ThumbnailsPlugin.java
+ com.asapjay.thumbnails.ThumbnailsPlugin

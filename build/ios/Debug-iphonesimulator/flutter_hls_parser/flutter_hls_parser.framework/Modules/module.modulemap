@@ -1,0 +1,6 @@
+framework module flutter_hls_parser {
+  umbrella header "flutter_hls_parser-umbrella.h"
+
+  export *
+  module * { export * }
+}

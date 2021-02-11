@@ -1,0 +1,4 @@
+com/cks/flutter_hls_parser/FlutterHlsParserPlugin.java
+ com.cks.flutter_hls_parser.FlutterHlsParserPlugin
+com/cks/flutter_hls_parser/BuildConfig.java
+ com.cks.flutter_hls_parser.BuildConfig

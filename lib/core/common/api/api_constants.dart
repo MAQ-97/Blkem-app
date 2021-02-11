@@ -6,4 +6,5 @@ class ApiConstants{
   static const String resetPassword="resetpassword";
   static const String postFeeds="feeds";
   static const String searchPeople="search_people";
+  static const String searchHashtag="search_hashtag";
 }

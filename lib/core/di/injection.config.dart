@@ -10,7 +10,8 @@ import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:twitter_login/twitter_login.dart';
-
+import '../../features/search/data/repo_impl/search_repo_impl.dart';
+import '../../features/search/domain/repo/search_repo.dart';
 import '../common/api/api_helper.dart';
 import '../../features/authentication/domain/repo/auth_repo.dart';
 import '../../features/authentication/data/datasource/auth_repo_impl.dart';
@@ -28,6 +29,8 @@ import 'register_module.dart';
 import '../../features/authentication/presentation/bloc/reset_password_cubit.dart';
 import '../../features/authentication/domain/usecase/reset_password_use_case.dart';
 import '../../features/search/presentation/bloc/search_cubit.dart';
+import '../../features/search/domain/usecase/search_use_case.dart';
+import '../../features/search/domain/repo/search_repo.dart';
 import '../../features/authentication/presentation/bloc/signup_cubit.dart';
 import '../../features/authentication/domain/usecase/sign_up_case.dart';
 import '../../features/authentication/domain/usecase/social_login_use_case.dart';
@@ -52,14 +55,15 @@ GetIt $initGetIt(
       () => LocalDataSourceImpl(get<Dio>(), get<FlutterSecureStorage>()));
   gh.factory<MessageCubit>(() => MessageCubit());
   gh.factory<NotificationCubit>(() => NotificationCubit());
-  gh.factory<SearchCubit>(() => SearchCubit());
+   
   gh.lazySingleton<TwitterLogin>(() => registerModule.twitterLogin);
   gh.factory<ApiHelper>(() => ApiHelper(get<LocalDataSource>()));
   gh.factory<FeedRepo>(() => FeedRepoImpl(get<ApiHelper>()));
   gh.factory<LoginUseCase>(() => LoginUseCase(get<AuthRepo>()));
-  gh.factory<ResetPasswordUseCase>(() => ResetPasswordUseCase(get<AuthRepo>()));
+  gh.factory<SearchUseCase>(() => SearchUseCase(get<SearchRepo>()));
   gh.factory<SignUpUseCase>(() => SignUpUseCase(get<AuthRepo>()));
   gh.factory<SocialLoginUseCase>(() => SocialLoginUseCase(get<AuthRepo>()));
+  gh.factory<ResetPasswordUseCase>(() => ResetPasswordUseCase(get<AuthRepo>()));
   gh.factory<LoginCubit>(() => LoginCubit(
         get<LocalDataSource>(),
         get<LoginUseCase>(),
@@ -69,13 +73,17 @@ GetIt $initGetIt(
       () => ResetPasswordCubit(get<ResetPasswordUseCase>()));
   gh.factory<SignUpCubit>(
       () => SignUpCubit(get<SignUpUseCase>(), get<SocialLoginUseCase>()));
-
+      gh.factory<SearchCubit>(
+      () => SearchCubit(get<SearchUseCase>()));
   // Eager singletons must be registered in the right order
   gh.singleton<AuthRepo>(AuthRepoImpl(
     get<ApiHelper>(),
     get<GoogleSignIn>(),
     get<TwitterLogin>(),
     get<LocalDataSource>(),
+  ));
+  gh.singleton<SearchRepo>(SearchRepoImpl(
+    get<ApiHelper>(),
   ));
   return get;
 }

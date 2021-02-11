@@ -4,12 +4,12 @@
 
 import 'dart:convert';
 
-SearchPeopleResponse welcomeFromMap(String str) => SearchPeopleResponse.fromMap(json.decode(str));
+SearchHashtagResponse welcomeFromMap(String str) => SearchHashtagResponse.fromMap(json.decode(str));
 
-String welcomeToMap(SearchPeopleResponse data) => json.encode(data.toMap());
+String welcomeToMap(SearchHashtagResponse data) => json.encode(data.toMap());
 
-class SearchPeopleResponse {
-  SearchPeopleResponse({
+class SearchHashtagResponse {
+  SearchHashtagResponse({
     this.errCode,
     this.code,
     this.message,
@@ -19,13 +19,13 @@ class SearchPeopleResponse {
   int errCode;
   int code;
   String message;
-  SearchPeopleData data;
+  SearchHashtagData data;
 
-  factory SearchPeopleResponse.fromMap(Map<String, dynamic> json) => SearchPeopleResponse(
+  factory SearchHashtagResponse.fromMap(Map<String, dynamic> json) => SearchHashtagResponse(
     errCode: json["err_code"],
     code: json["code"],
     message: json["message"],
-    data: SearchPeopleData.fromMap(json["data"]),
+    data: SearchHashtagData.fromMap(json["data"]),
   );
 
   Map<String, dynamic> toMap() => {
@@ -36,24 +36,24 @@ class SearchPeopleResponse {
   };
 }
 
-class SearchPeopleData {
-  SearchPeopleData({
-    this.searchPeoples,
+class SearchHashtagData {
+  SearchHashtagData({
+    this.searchHashtags,
   });
 
-  List<SearchPeople> searchPeoples;
+  List<SearchHashtag> searchHashtags;
 
-  factory SearchPeopleData.fromMap(Map<String, dynamic> json) => SearchPeopleData(
-    searchPeoples: List<SearchPeople>.from(json["searchs"].map((x) => SearchPeople.fromMap(x))),
+  factory SearchHashtagData.fromMap(Map<String, dynamic> json) => SearchHashtagData(
+    searchHashtags: List<SearchHashtag>.from(json["searchHashtags"].map((x) => SearchHashtag.fromMap(x))),
   );
 
   Map<String, dynamic> toMap() => {
-    "searchPeoples": List<dynamic>.from(searchPeoples.map((x) => x.toMap())),
+    "searchPeoples": List<dynamic>.from(searchHashtags.map((x) => x.toMap())),
   };
 }
 
-class SearchPeople {
-  SearchPeople({
+class SearchHashtag {
+  SearchHashtag({
     this.id,
     this.about,
     this.followers,
@@ -92,7 +92,7 @@ class SearchPeople {
   bool is_following;
   bool follow_requested;
 
-  factory SearchPeople.fromMap(Map<String, dynamic> json) => SearchPeople(
+  factory SearchHashtag.fromMap(Map<String, dynamic> json) => SearchHashtag(
     id: json["id"],
     about: json["about"],
     followers: json["followers"],
