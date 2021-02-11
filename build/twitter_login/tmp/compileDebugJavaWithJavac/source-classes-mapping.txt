@@ -1,2 +1,0 @@
-com/maru/twitter_login/BuildConfig.java
- com.maru.twitter_login.BuildConfig
